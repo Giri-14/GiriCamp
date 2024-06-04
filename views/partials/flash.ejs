@@ -1,0 +1,96 @@
+<% if(success && success.length) { %>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <span class="alert-message"><%= success %></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="hideAlert(this)">
+            <span aria-hidden="true" >&times;</span>
+        </button>
+    </div>
+    <style>
+
+        .close{
+           position: absolute;
+           top:auto;
+           right:10px;
+            
+        }
+        .alert{
+            position: relative;
+            justify-content: space-between;
+        }
+        /* Add this style block to your page or CSS file */
+        .alert-message {
+            margin-right: 10px; /* Adjust the margin as needed */
+        }
+
+        /* Remove the border around the "x" symbol */
+        .close {
+            border: none;
+            padding: 0;
+            background: transparent;
+        }
+    </style>
+    <script>
+        function hideAlert(button) {
+            // Get the parent element (the alert div)
+            var alertDiv = button.parentNode;
+            
+            // Add the 'fade' class to initiate the fade-out animation
+            alertDiv.classList.add('fade');
+            
+            // After the fade-out animation duration (e.g., 1 second), hide the alert
+            setTimeout(function() {
+                alertDiv.style.display = 'none';
+            }, 1); // Adjust the duration as needed
+        }
+    </script>
+<% } %>
+
+
+<% if(error && error.length) { %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <span class="alert-message"><%= error %></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="hideAlert(this)">
+            <span aria-hidden="true" >&times;</span>
+        </button>
+    </div>
+    <style>
+
+        .close{
+           position: absolute;
+           top:auto;
+           right:10px;
+            
+        }
+        .alert{
+            position: relative;
+            justify-content: space-between;
+        }
+        /* Add this style block to your page or CSS file */
+        .alert-message {
+            margin-right: 10px; /* Adjust the margin as needed */
+        }
+
+        /* Remove the border around the "x" symbol */
+        .close {
+            border: none;
+            padding: 0;
+            background: transparent;
+        }
+    </style>
+    <script>
+        function hideAlert(button) {
+            // Get the parent element (the alert div)
+            var alertDiv = button.parentNode;
+            
+            // Add the 'fade' class to initiate the fade-out animation
+            alertDiv.classList.add('fade');
+            
+            // After the fade-out animation duration (e.g., 1 second), hide the alert
+            setTimeout(function() {
+                alertDiv.style.display = 'none';
+            }, 1); // Adjust the duration as needed
+        }
+    </script>
+<% } %>
+
+
